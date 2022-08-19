@@ -38,6 +38,8 @@ contract WavePortal {
         /*
          * コントラクト側でemitされたイベントに関する通知をフロントエンドで取得できるようにする。
          */
+         // コントラクトでイベントがemitされると、フロントエンドのApp.jsでその情報を受取る
+         // New Waveイベントがemitされる際に以下の情報をApp.jsに送信している
         emit NewWave(msg.sender, block.timestamp, _message);
     }
     /*
